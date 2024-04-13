@@ -3,16 +3,9 @@
   Використовуйте generics, щоб цей інтерфейс міг працювати з будь-якими типами ключів та значень.
 */
 
-class KeyValuePair<TKey, TValue> {
-  constructor(private key: TKey, private value: TValue) {}
-
-  getKey(): TKey {
-    return this.key;
-  }
-
-  getValue(): TValue {
-    return this.value;
-  }
+interface KeyValuePair<TKey, TValue> {
+  key(): TKey;
+  value(): TValue;
 }
 
 export {};
